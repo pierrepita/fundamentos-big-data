@@ -43,21 +43,21 @@ dag = DAG(
 # [START howto_operator_bash]
 ler_arquivo = BashOperator(
     task_id='ler_arq_selecionar_vars',
-    bash_command='sh /home/bigdata/repos/fundamentos-big-data/airflow/01-read-and-slice.sh',
+    bash_command='sh /home/bigdata/repos/fundamentos-big-data/airflow/01-read-and-slice.sh ',
     dag=dag,
 )
 
 
 indexar = BashOperator(
     task_id='indexar_base_cortada',
-    bash_command='sh /home/bigdata/repos/fundamentos-big-data/airflow/02-indexing.sh',
+    bash_command='sh /home/bigdata/repos/fundamentos-big-data/airflow/02-indexing.sh ',
     dag=dag,
 )
 
 
 query = BashOperator(
     task_id='fazer_busca_em_base_indexada',
-    bash_command='sh /home/bigdata/repos/fundamentos-big-data/airflow/03-some-es-queries.sh',
+    bash_command='sh /home/bigdata/repos/fundamentos-big-data/airflow/03-some-es-queries.sh ',
     dag=dag,
 )
 
